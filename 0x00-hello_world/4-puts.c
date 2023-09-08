@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main . A programm that prints a libe with put function
- * Return:0
+ * main - A programm that prints a libe with put function
+ * Return:0 (Success)
  */
 int main(void)
 {
