@@ -9,21 +9,19 @@
 
 int main(void)
 {
-int n;
-
+int n, lastd;
 srand(time(0));
+n = rand() - RAND_MAX / 2;
 
-n = rand();
+int lastd = n % 10;
 
-int lastDigit = n % 10;
+printf("lastd of %d is %d and is ", n, lastd);
 
-printf("Last digit of %d is %d and is ", n, lastDigit);
-
-if (lastDigit > 5)
+if (lastd > 5)
 {
 printf("greater than 5\n");
 }
-else if (lastDigit == 0)
+else if (lastd == 0)
 {
 printf("0\n");
 }
