@@ -1,11 +1,13 @@
 #include <unistd.h>
 /**
- * main - A C program that print line in standard error
- * Return: 1(Sucess)
+ * main - Entry point
+ * Return: Always 0 success
  */
 
 int main(void)
 {
-write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59)
-return (1);
+    char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    write(2, message, 59); // 59 is the length of the message
+
+    return 1;
 }
