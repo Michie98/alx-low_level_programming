@@ -1,3 +1,8 @@
+/*
+ *File: 0-putchar.c
+ *Author: Michael Wagura
+ */
+
 #include "main.h"
 
 /**
