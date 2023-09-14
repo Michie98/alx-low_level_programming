@@ -1,18 +1,21 @@
+/*
+* File: 3-print_numbers.c
+* Author: Peter Njoroge
+*/
+
 #include "main.h"
 
 /**
- * print_numbers - prints numbers from 0 to 9 followed by a newline
- * return: void
- */
-
+* print_numbers - print numbers 0-9
+* Return: nothing
+*/
 void print_numbers(void)
 {
-char c;
+	char l;
 
-for (c = '0'; c <= '9'; c++)
-{
-_putchar(c);
+	for (l = '0'; l <= '9'; l++)
+	{
+	_putchar(l);
+	}
+	_putchar('\n');
 }
-_putchar('\n');
-}
-
