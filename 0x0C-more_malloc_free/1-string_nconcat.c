@@ -2,33 +2,45 @@
 #include <stdlib.h>
 
 /**
-*  _strdup - returns a pointer to a newly allocated space in memory,
-* which contains a copy of the string given as a parameter.
-*  @str: char arg
-*  Return: char
+*  string_nconcat - concatenates two strings.
+*  @s1: char arg
+*  @s2: char arg
+*  @n: int arg
+*  Return: int
 */
 
-char *_strdup(char *str)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ch;
-	unsigned int i, len;
+	unsigned int x, y, z;
+	char *s;
 
-	i = 0;
-	len = 0;
-
-	if (str == NULL)
+	if (s1 == NULL)
+	{
+		x = 0;
+	}
+	else
+	{
+		for (x = 0; s1[x]; ++x)
+		;
+	}
+	if (s2 == NULL)
+	{
+		y = 0;
+	}
+	else
+	{
+		for (y = 0; s2[y]; ++y)
+		;
+	}
+	if (y > n)
+		y = n;
+	s = malloc(sizeof(char) * (x + y + 1));
+	if (s == NULL)
 		return (NULL);
-
-	while (str[len])
-		len++;
-
-	ch = malloc(sizeof(char) * (len + 1));
-
-	if (ch == NULL)
-		return (NULL);
-
-	while ((ch[i] = str[i]) != '\0')
-		i++;
-
-	return (ch);
+	for (z = 0; z < x; z++)
+		s[z] = s1[z];
+	for (z = 0; z < y; z++)
+		s[z + x] = s2[z];
+	s[x + y] = '\0';
+	return (s);
 }
